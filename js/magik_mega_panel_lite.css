@@ -1,0 +1,66 @@
+.mmpl{position:fixed;z-index:1000;width:300px;max-width:calc(100vw - 12px);max-height:calc(100vh - 12px);overflow:auto;box-sizing:border-box;background:#202328;color:#eee;border:1px solid #535963;border-radius:10px;box-shadow:0 8px 26px #0007;font:13px system-ui}.mmpl [hidden],.mmpl[hidden],.mmpl-toggle[hidden]{display:none!important}.mmpl header{display:flex;align-items:center;gap:5px;padding:9px;border-bottom:1px solid #454951}.mmpl header strong{flex:1;font-size:12px}.mmpl-drag{cursor:grab;font-size:24px;touch-action:none;user-select:none}.mmpl-body{display:flex;flex-direction:column;gap:10px;padding:12px}.mmpl-group{display:flex;flex-direction:column;gap:8px;min-width:0}.mmpl-group+.mmpl-group{border-top:1px solid #454951;padding-top:10px}.mmpl button,.mmpl select,.mmpl input{font:inherit;color:inherit;background:#30353d;border:1px solid #555e69;border-radius:5px;box-sizing:border-box;min-height:30px}.mmpl button{padding:5px 9px;cursor:pointer}.mmpl button:hover{background:#424a55}.mmpl button:disabled{opacity:.45;cursor:default}.mmpl button.on{border-color:#71dfb3;background:#235847}.mmpl input[type=number]{width:95px;padding:4px 6px}.mmpl input[type=checkbox]{min-height:0;accent-color:#60d8aa}.mmpl label{display:flex;align-items:center;gap:8px;justify-content:space-between}.mmpl select{width:100%;padding:4px}.mmpl-row{display:flex;align-items:center;gap:6px}.mmpl-row label{flex:1;min-width:0}.mmpl-row label span{display:none}.mmpl-row input{width:100%!important}.mmpl-row button{white-space:nowrap}.mmpl-index{font-size:42px;text-align:center;font-variant-numeric:tabular-nums;color:#7be0ba}.mmpl footer{padding:9px 12px;color:#b9c4d1;border-top:1px solid #454951;overflow-wrap:anywhere}.mmpl small{color:#b9c4d1}.mmpl.horizontal{width:max-content}.mmpl.horizontal .mmpl-body{flex-direction:row;flex-wrap:wrap}.mmpl.horizontal .mmpl-group{width:245px}.mmpl.horizontal .mmpl-group+.mmpl-group{border-top:0;border-left:1px solid #454951;padding-top:0;padding-left:12px}.mmpl-toggle{position:fixed;right:20px;bottom:20px;z-index:999;padding:8px 12px;border:1px solid #64756f;border-radius:6px;background:#233a32;color:#c8f7e4;cursor:pointer;font:13px system-ui}
+
+/* Compact action layout and requested button colours. */
+.mmpl-reset-row{display:grid;grid-template-columns:3fr 1fr;gap:6px}
+.mmpl-reset-row button{min-width:0;padding-inline:5px}
+.mmpl .mmpl-fire-row{height:90px}
+.mmpl .mmpl-fire-row button{height:100%}
+.mmpl .mmpl-fire-row button:nth-child(2){flex:1}
+.mmpl button.mmpl-set-next{background:#245fb4;border-color:#649ae8;color:#fff}
+.mmpl button.mmpl-set-next:hover{background:#2e73ce}
+.mmpl button.mmpl-aim{background:#dfbd35;border-color:#f0d66d;color:#211b07}
+.mmpl button.mmpl-aim:hover{background:#f0cf49}
+.mmpl button.mmpl-aim.on{background:#f0cf49;border-color:#fff0a2;box-shadow:inset 0 0 0 1px #fff0a2}
+.mmpl button.mmpl-clear{background:#a83039;border-color:#e96a73;color:#fff}
+.mmpl button.mmpl-clear:hover{background:#c8404a}
+
+.mmpl{transform-origin:top left}
+.mmpl .mmpl-target-row{height:60px}
+.mmpl .mmpl-target-row button,.mmpl .mmpl-target-row label,.mmpl .mmpl-target-row input{height:100%}
+.mmpl .mmpl-target-row input{font-size:24px;text-align:center}
+.mmpl .mmpl-summary{font-size:26px;line-height:1.3;text-align:center;overflow-wrap:anywhere}
+.mmpl .mmpl-index{font-size:84px;line-height:1.15;overflow-wrap:anywhere}
+.mmpl button.mmpl-fire{background:#23834b;border-color:#62d891;color:#fff;font-weight:700;line-height:1;white-space:nowrap;min-width:0}
+.mmpl button.mmpl-fire:hover{background:#2b9a59}
+.mmpl input[type=range]{width:100%;accent-color:#60d8aa;min-height:24px}
+
+.mmpl-shortcuts{display:flex;flex-direction:column;gap:6px}
+.mmpl-phase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,auto);gap:5px}
+.mmpl-phase-grid button{min-width:0;padding:6px 2px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.mmpl-start-one{width:100%}
+
+/* Theme palettes leave action colours consistent across themes. */
+.mmpl,.mmpl-toggle{--panel:#202328;--text:#eeeeee;--line:#535963;--control:#30353d;--control-line:#555e69;--hover:#424a55;--muted:#b9c4d1;--accent:#7be0ba;--active:#235847;--active-text:#eeeeee}
+.mmpl[data-theme=light],.mmpl-toggle[data-theme=light]{--panel:#f5f7fa;--text:#202936;--line:#b6c0cd;--control:#e5eaf1;--control-line:#a3b0c0;--hover:#d4dde9;--muted:#475b70;--accent:#17704b;--active:#b9e8d1;--active-text:#163b2a}
+.mmpl[data-theme=midnight],.mmpl-toggle[data-theme=midnight]{--panel:#121b30;--text:#e4edff;--line:#394e76;--control:#202e49;--control-line:#4a638c;--hover:#304466;--muted:#a9bfdf;--accent:#89c8ff;--active:#244e66;--active-text:#e4edff}
+.mmpl[data-theme=forest],.mmpl-toggle[data-theme=forest]{--panel:#182b23;--text:#e4f1e6;--line:#456954;--control:#294035;--control-line:#60846b;--hover:#3b5846;--muted:#afc9b5;--accent:#b0e49b;--active:#426448;--active-text:#e4f1e6}
+.mmpl[data-theme=plum],.mmpl-toggle[data-theme=plum]{--panel:#2c1d32;--text:#f4e7f6;--line:#775680;--control:#432b4b;--control-line:#866291;--hover:#5b3b65;--muted:#cfb1d5;--accent:#e7b1f0;--active:#61426b;--active-text:#f4e7f6}
+.mmpl{background:var(--panel);color:var(--text);border-color:var(--line)}
+.mmpl header,.mmpl footer,.mmpl .mmpl-group+.mmpl-group{border-color:var(--line)}
+.mmpl button,.mmpl select,.mmpl input{background:var(--control);color:var(--text);border-color:var(--control-line)}
+.mmpl button:hover{background:var(--hover)}
+.mmpl button.on{background:var(--active);color:var(--active-text)}
+.mmpl footer,.mmpl small{color:var(--muted)}
+.mmpl .mmpl-index{color:var(--accent)}
+.mmpl-toggle{background:var(--panel);color:var(--text);border-color:var(--line)}
+.mmpl-phase-grid button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.mmpl-phase-name{font-size:9px;color:#f4d34e;line-height:1.2;min-height:24px;display:flex;align-items:center;justify-content:center;text-align:center;overflow-wrap:anywhere}
+.mmpl-phase-value{font-size:15px;font-weight:600}
+
+/* Horizontal shortcuts sit between the counter and range columns. */
+.mmpl.horizontal .mmpl-shortcut-column{width:300px;flex:0 0 300px;border-left:1px solid var(--line);padding-left:12px;box-sizing:border-box}
+.mmpl.horizontal .mmpl-shortcut-column .mmpl-phase-grid{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,auto)}
+.mmpl.horizontal .mmpl-shortcut-column+.mmpl-group{border-left:1px solid var(--line);padding-left:12px}
+
+.mmpl[data-theme=ocean],.mmpl-toggle[data-theme=ocean]{--panel:#102c34;--text:#e0f6f8;--line:#38727e;--control:#1c444e;--control-line:#4a8894;--hover:#2a5b66;--muted:#a3ced4;--accent:#6fe8df;--active:#246961;--active-text:#e0f6f8}
+.mmpl[data-theme=ember],.mmpl-toggle[data-theme=ember]{--panel:#30221d;--text:#fff0df;--line:#916348;--control:#4a3329;--control-line:#a67856;--hover:#624536;--muted:#dab99c;--accent:#ffbd78;--active:#65533a;--active-text:#fff0df}
+.mmpl[data-theme=slate],.mmpl-toggle[data-theme=slate]{--panel:#252b33;--text:#edf0f5;--line:#647282;--control:#39434f;--control-line:#7d8c9d;--hover:#4b5867;--muted:#bcc8d5;--accent:#a6ccf0;--active:#465d6a;--active-text:#edf0f5}
+.mmpl[data-theme=rose],.mmpl-toggle[data-theme=rose]{--panel:#34212b;--text:#ffeaf1;--line:#94586f;--control:#50323f;--control-line:#ab6b84;--hover:#6a4555;--muted:#ddb4c4;--accent:#ffa8cc;--active:#6b4455;--active-text:#ffeaf1}
+.mmpl[data-theme=sand],.mmpl-toggle[data-theme=sand]{--panel:#eee5d6;--text:#352b22;--line:#ac9577;--control:#ded0bb;--control-line:#9b8469;--hover:#cfbca0;--muted:#6d5944;--accent:#79502c;--active:#bdcfac;--active-text:#2e4228}
+.mmpl.horizontal .mmpl-body{display:grid;grid-template-columns:245px 300px 245px;grid-template-rows:min-content 1fr;align-items:start}
+.mmpl.horizontal .mmpl-counter{grid-column:1;grid-row:1 / span 2}
+.mmpl.horizontal .mmpl-shortcut-column{grid-column:2;grid-row:1}
+.mmpl.horizontal .mmpl-range{grid-column:2;grid-row:2;width:300px;box-sizing:border-box;padding-top:10px;border-top:1px solid var(--line)}
+.mmpl.horizontal .mmpl-actions{grid-column:3;grid-row:1 / span 2}
+.mmpl.horizontal .mmpl-settings{grid-column:4;grid-row:1 / span 2}
+.mmpl[data-theme=light] .mmpl-phase-name,.mmpl[data-theme=sand] .mmpl-phase-name{color:#876300}

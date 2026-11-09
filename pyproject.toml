@@ -1,0 +1,16 @@
+[project]
+name = "comfyui-magik-mega-panel-lite"
+version = "1.0.0"
+description = 'Magik Mega Panel Lite'
+authors = [{name = "IA-gyz"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/IA-gyz/comfyui-magik-mega-panel-lite"
+
+[tool.comfy]
+PublisherId = "IA-gyz"
+DisplayName = "Magik Mega Panel Lite"
